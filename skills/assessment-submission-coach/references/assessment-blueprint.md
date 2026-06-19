@@ -1,6 +1,6 @@
 # Agentic AI Foundations Assessment Blueprint
 
-The final learner submission is a single PDF portfolio. It must use only anonymized or dummy data.
+The final learner submission is a professional Microsoft Word portfolio (`.docx`). It must use only anonymized or dummy data and must include the learner's full name plus the assessment date at the top of the document.
 
 ## Evidence Map
 
@@ -19,7 +19,13 @@ The final learner submission is a single PDF portfolio. It must use only anonymi
 - Reliability: The system handles messy inputs, edge cases, validation failures, and logs failures.
 - Safety: Mandatory pass. The learner must avoid real personal data, confidential data, exposed secrets, and unsafe tool access.
 
-## Final PDF Sections
+## Final Word Document Sections
+
+The document must start with:
+
+- Learner full name.
+- Assessment date.
+- Course name.
 
 1. Workflow Selection (LO1)
 2. Codex Plugin and DUO Prompting (LO2)
@@ -27,4 +33,3 @@ The final learner submission is a single PDF portfolio. It must use only anonymi
 4. Automated Logic and Observability (LO4)
 5. Controlled Agent Scope (LO5)
 6. Safety and Governance (LO6)
-
