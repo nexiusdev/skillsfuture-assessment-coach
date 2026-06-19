@@ -1,6 +1,6 @@
 # Assessment Submission Coach Plugin
 
-Codex plugin package for coaching Agentic AI Foundations learners through a competency-based assessment submission.
+For coaching Agentic AI Foundations learners through a competency-based assessment submission.
 
 ## Contents
 
@@ -12,12 +12,12 @@ Codex plugin package for coaching Agentic AI Foundations learners through a comp
 
 Install the plugin folder itself, not the repository root.
 
-1. Download or clone the `accountant-ai-playbook` repository.
+1. Download or clone this` repository.
 2. In Codex App, choose the option to add or install a local plugin.
 3. Select this folder:
 
 ```text
-accountant-ai-playbook/plugins/assessment-submission-coach-plugin
+https://github.com/nexiusdev/skillsfuture-assessment-coach
 ```
 
 4. Confirm this manifest exists inside the selected folder:
@@ -31,7 +31,7 @@ accountant-ai-playbook/plugins/assessment-submission-coach-plugin
 Do not select the repo root:
 
 ```text
-accountant-ai-playbook
+https://github.com/nexiusdev/skillsfuture-assessment-coach
 ```
 
 That folder does not contain the plugin manifest at its top level.
