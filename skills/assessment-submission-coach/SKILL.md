@@ -1,11 +1,11 @@
 ---
 name: assessment-submission-coach
-description: Guide learners through the Agentic AI Foundations competency-based assessment submission by reading project folders first, inferring assessment context from existing files, and asking only necessary clarification questions. Use when a learner needs help preparing, checking, improving, or packaging the single-PDF portfolio covering LO1 workflow selection, LO2 Codex plugin and DUO prompting, LO3 mini-app in a separate Codex project, LO4 automation and observability, LO5 controlled agent scope, and LO6 safety and governance.
+description: Guide learners through the Agentic AI Foundations competency-based assessment submission by reading project folders first, inferring assessment context from existing files, and asking only necessary clarification questions. Use when a learner needs help preparing, checking, improving, or packaging a professional Microsoft Word assessment portfolio covering LO1 workflow selection, LO2 Codex plugin and DUO prompting, LO3 mini-app in a separate Codex project, LO4 automation and observability, LO5 controlled agent scope, and LO6 safety and governance.
 ---
 
 # Assessment Submission Coach
 
-Use this skill to coach a learner through a complete assessment portfolio. The required final submission is one PDF using only anonymized or dummy data.
+Use this skill to coach a learner through a complete assessment portfolio. The required final submission is a professional Microsoft Word document (`.docx`) using only anonymized or dummy data.
 
 ## Core Behavior
 
@@ -13,6 +13,7 @@ Use this skill to coach a learner through a complete assessment portfolio. The r
 - Help the learner produce evidence, documentation, screenshots, logs, and safety confirmations for all six learning outcomes.
 - Read the project folders first and infer as much context as possible from existing files before asking the learner anything.
 - Ask the learner only when required evidence is missing, ambiguous, contradictory, unsafe, or cannot be inferred from the available files.
+- For final assessment output, always create professional Microsoft Word content and require the learner's full name plus the current assessment date at the top of the document.
 - Keep LO1, LO2, LO4, LO5, and LO6 in one related Codex project folder because they share the same selected workflow, prompt/plugin work, automation design, agent scope, and safety governance.
 - Treat LO3 as a separate Codex project folder and separate Codex run because the mini-app implementation has its own source code, build/test loop, screenshots, app evidence, and validation proof.
 - Do not invent evidence, screenshots, logs, app links, test results, or safety confirmations.
@@ -82,7 +83,7 @@ screenshot, validation rules, handled error-state proof, and test notes.
 ## Source References
 
 - Read `references/assessment-blueprint.md` when checking requirements, mapping sections to learning outcomes, or diagnosing gaps.
-- Use `assets/learner-submission-template.md` when the learner asks for a starting document, section structure, or final PDF content.
+- Use `assets/learner-submission-template.md` when the learner asks for a starting document, section structure, or final Word document content.
 - Run `scripts/check_submission.py <path-to-markdown-or-text-file>` when a learner has a draft and wants a quick completeness check.
 
 ## Coaching Workflow
@@ -91,7 +92,7 @@ screenshot, validation rules, handled error-state proof, and test notes.
    - Identify the main Codex project folder for LO1, LO2, LO4, LO5, and LO6 from the current workspace or provided path.
    - Identify the separate LO3 Codex project folder from nearby folders, provided paths, README links, or project notes.
    - If the LO3 folder cannot be found, ask only for the LO3 folder path or recommend creating it before mini-app implementation begins.
-   - Explain that the final submission remains one PDF even though the work is split across two Codex project folders.
+   - Explain that the final submission remains one professional Word document even though the work is split across two Codex project folders.
 
 2. Infer the learner's chosen workflow from files.
    - Read project files before asking for workflow details.
@@ -126,7 +127,7 @@ screenshot, validation rules, handled error-state proof, and test notes.
    - Require a screenshot or proof of a handled error state, such as missing required fields or invalid file type.
    - Check that the mini-app actually supports the selected workflow end to end.
    - Ask only for LO3 evidence that cannot be found in app files, screenshots, tests, logs, or README notes.
-   - When LO3 is complete, summarize only the required LO3 evidence for inclusion in the final PDF.
+   - When LO3 is complete, summarize only the required LO3 evidence for inclusion in the final Word document.
 
 6. Resume the main assessment project folder and build the LO4 section.
    - Inspect automation files, diagrams, scripts, run logs, scheduler config, alert screenshots, README notes, and observability evidence before asking questions.
@@ -151,7 +152,10 @@ screenshot, validation rules, handled error-state proof, and test notes.
    - Ask only for missing, unsafe, or unclear LO6 evidence.
 
 9. Final readiness check.
-   - Verify the submission is one PDF.
+   - Verify the submission is one professional Microsoft Word document (`.docx`).
+   - Verify the top of the document includes `Learner Name: <full name>` and `Assessment Date: <today's date>`.
+   - If the learner's full name cannot be inferred from project files, ask for it before producing the final document.
+   - Use the current date at document generation time as the assessment date unless the learner explicitly provides a different assessment date.
    - Verify all six sections are present.
    - Verify LO1, LO2, LO4, LO5, and LO6 evidence came from the main assessment project folder.
    - Verify LO3 evidence came from the separate mini-app Codex project folder.
@@ -161,6 +165,23 @@ screenshot, validation rules, handled error-state proof, and test notes.
    - Ask only for the final missing items that block readiness.
 
 ## Output Patterns
+
+When producing the final assessment document, create a professional Word-ready
+structure with this cover header at the top:
+
+```markdown
+# Agentic AI Foundations Assessment Portfolio
+
+Learner Name: <user's full name>
+
+Assessment Date: <today's date>
+
+Course: Agentic AI Foundations for Non-Technical Professionals
+```
+
+Use clear section headings, concise professional language, readable tables, and
+evidence captions suitable for conversion into `.docx`. Do not present the final
+assessment as plain chat-only notes.
 
 When helping draft content, use this structure:
 
