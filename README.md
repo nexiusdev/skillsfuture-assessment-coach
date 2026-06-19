@@ -1,71 +1,94 @@
-# Assessment Submission Coach Plugin
+# Assessment Submission Coach Skill
 
-For coaching Agentic AI Foundations learners through a competency-based assessment submission.
+A standalone Codex skill for coaching Agentic AI Foundations learners through a
+competency-based assessment submission.
 
 ## Contents
 
-- `.codex-plugin/plugin.json`: plugin manifest
-- `skills/assessment-submission-coach/`: coaching skill, assessment blueprint, learner template, and completeness checker
-- `templates/`: Appendix A Word templates from `AppendixA_Templates_Agentic_AI_Foundations_v1.1.zip`
+- `skills/assessment-submission-coach/SKILL.md`: the Codex skill entrypoint.
+- `skills/assessment-submission-coach/references/`: assessment requirements and
+  checking guidance used by the skill.
+- `skills/assessment-submission-coach/assets/`: reusable learner submission
+  template.
+- `skills/assessment-submission-coach/scripts/`: lightweight completeness
+  checker for draft submissions.
+- `templates/`: optional Appendix A Word templates from
+  `AppendixA_Templates_Agentic_AI_Foundations_v1.1.zip`.
 
-## Install In Codex App
+## Install
 
-Install the plugin folder itself, not the repository root.
-
-1. Download or clone this` repository.
-2. In Codex App, choose the option to add or install a local plugin.
-3. Select this folder:
-
-```text
-https://github.com/nexiusdev/skillsfuture-assessment-coach
-```
-
-4. Confirm this manifest exists inside the selected folder:
+Install the skill folder itself:
 
 ```text
-.codex-plugin/plugin.json
+skills/assessment-submission-coach
 ```
 
-5. Restart or refresh Codex App if the plugin does not appear immediately.
+### Windows PowerShell
 
-Do not select the repo root:
+```powershell
+git clone https://github.com/nexiusdev/skillsfuture-assessment-coach.git
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills" | Out-Null
+Copy-Item -Recurse -Force ".\skillsfuture-assessment-coach\skills\assessment-submission-coach" "$env:USERPROFILE\.codex\skills\assessment-submission-coach"
+```
+
+### macOS Or Linux
+
+```bash
+git clone https://github.com/nexiusdev/skillsfuture-assessment-coach.git
+mkdir -p "$HOME/.codex/skills"
+cp -R ./skillsfuture-assessment-coach/skills/assessment-submission-coach "$HOME/.codex/skills/assessment-submission-coach"
+```
+
+Restart Codex after copying the skill if it does not appear immediately.
+
+## Verify Installation
+
+After installation, confirm this file exists:
 
 ```text
-https://github.com/nexiusdev/skillsfuture-assessment-coach
+~/.codex/skills/assessment-submission-coach/SKILL.md
 ```
 
-That folder does not contain the plugin manifest at its top level.
+On Windows, the equivalent path is:
+
+```text
+C:\Users\<your-name>\.codex\skills\assessment-submission-coach\SKILL.md
+```
 
 ## Prompt Codex To Install
 
-If a learner wants Codex to help install the local plugin, they can paste:
-
 ```text
-Install the local Codex plugin from this folder:
-<full-path-to-accountant-ai-playbook>/plugins/assessment-submission-coach-plugin
+Install the Codex skill from this GitHub repository:
+https://github.com/nexiusdev/skillsfuture-assessment-coach
 
-Check that .codex-plugin/plugin.json exists, then help me enable the Assessment Submission Coach plugin in Codex App.
-```
-
-On Windows, the path may look like:
-
-```text
-C:\Users\<your-name>\Downloads\accountant-ai-playbook\plugins\assessment-submission-coach-plugin
+Copy skills/assessment-submission-coach into my Codex skills directory and
+confirm that SKILL.md is installed.
 ```
 
 ## Common Install Issues
 
-- The wrong folder was selected. Select `plugins/assessment-submission-coach-plugin`, not `accountant-ai-playbook`.
-- The `.codex-plugin` folder is missing because files were copied manually. Download the GitHub ZIP or use `git clone`.
-- The repository ZIP was not extracted before installation.
-- Codex App needs to be refreshed or restarted after adding the plugin.
+- The repository root was copied instead of the skill folder. The installed
+  path should end with `skills/assessment-submission-coach`.
+- The `SKILL.md` file is missing from the installed folder.
+- The repository ZIP was not extracted before copying.
+- Codex needs to be refreshed or restarted after adding the skill.
 
 ## Use Case
 
-Use this plugin when a learner needs help preparing, reviewing, improving, or packaging the final Agentic AI Foundations assessment portfolio.
+Use this skill when a learner needs help preparing, reviewing, improving, or
+packaging the final Agentic AI Foundations assessment portfolio.
 
-The final learner submission should be a single PDF and must use only dummy or anonymized data.
+The final learner submission should be a single PDF and must use only dummy or
+anonymized data.
 
 ## Safety Boundary
 
-Do not include real personal data, confidential client information, API keys, passwords, private URLs, or screenshots containing secrets in learner submissions or reusable examples.
+Do not include real personal data, confidential client information, API keys,
+passwords, private URLs, or screenshots containing secrets in learner
+submissions or reusable examples.
+
+## Template Status
+
+The skill works without the optional `.docx` templates. If the `templates/`
+folder is present, learners may use those files as supporting worksheets before
+compiling the final single-PDF submission.
