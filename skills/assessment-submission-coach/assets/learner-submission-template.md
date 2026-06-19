@@ -1,10 +1,12 @@
-# Agentic AI Foundations Assessment Submission
+# Agentic AI Foundations Assessment Portfolio
 
 Course: Agentic AI Foundations for Non-Technical Professionals
 
 Learner Name: ____________________
 
-Date: ____________________
+Assessment Date: ____________________
+
+Document Format: Microsoft Word (`.docx`)
 
 ## Section 1: Workflow Selection (LO1)
 
@@ -106,4 +108,3 @@ I confirm this submission follows all PDPA and safety guidelines.
 Full Name: ______________________________
 
 Date: ___________________________________
-
