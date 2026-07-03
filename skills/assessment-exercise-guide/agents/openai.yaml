@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assessment Exercise Guide"
+  short_description: "Guide learners through LO1-LO6 evidence"
+  default_prompt: "Use $assessment-exercise-guide to guide a learner step by step through the F&B CEO report assessment exercise, including the final LO3 branch daily-report web app build."
