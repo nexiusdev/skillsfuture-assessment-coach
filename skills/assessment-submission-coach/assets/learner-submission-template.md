@@ -108,3 +108,23 @@ I confirm this submission follows all PDPA and safety guidelines.
 Full Name: ______________________________
 
 Date: ___________________________________
+
+## Final Email Submission
+
+Recipient: melverick@nexiuslabs.com
+
+Subject: Agentic AI Foundations Assessment Portfolio - ____________________
+
+Attachment:
+- Final Word portfolio `.docx`
+
+Draft Body:
+I created the assessment report with the Word report attached.
+
+Gmail Connection Note:
+- Codex should first check for Gmail tools, then guide the learner to install or connect the exact Gmail plugin/connector if Gmail is not already connected.
+- To install or connect Gmail, open Codex connectors/plugins, search for `Gmail`, choose the Gmail plugin/connector, and select install/connect/enable when prompted.
+- Connect Gmail through Codex connectors/apps when prompted.
+- Sign in only through Google's secure consent screen.
+- Do not paste Gmail passwords, app passwords, backup codes, OAuth tokens, or recovery codes into Codex chat.
+- Review and approve the draft before Codex sends the email with the report attached.

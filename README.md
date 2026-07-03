@@ -78,8 +78,8 @@ confirm that SKILL.md is installed.
 Use this skill when a learner needs help preparing, reviewing, improving, or
 packaging the final Agentic AI Foundations assessment portfolio.
 
-The final learner submission should be a single PDF and must use only dummy or
-anonymized data.
+The final learner submission should be a professional Microsoft Word `.docx`
+portfolio and must use only dummy or anonymized data.
 
 ## Safety Boundary
 
@@ -91,4 +91,4 @@ submissions or reusable examples.
 
 The skill works without the optional `.docx` templates. If the `templates/`
 folder is present, learners may use those files as supporting worksheets before
-compiling the final single-PDF submission.
+compiling the final Word portfolio submission.

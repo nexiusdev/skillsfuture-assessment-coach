@@ -1,6 +1,6 @@
 ---
 name: assessment-submission-coach
-description: Guide learners through the Agentic AI Foundations competency-based assessment submission by reading project folders first, inferring assessment context from existing files, and asking only necessary clarification questions. Use when a learner needs help preparing, checking, improving, or packaging a professional Microsoft Word assessment portfolio covering LO1 workflow selection, LO2 Codex plugin and DUO prompting, LO3 mini-app in a separate Codex project, LO4 automation and observability, LO5 controlled agent scope, and LO6 safety and governance.
+description: Guide learners through the Agentic AI Foundations competency-based assessment submission by reading project folders first, inferring assessment context from existing files, and asking only necessary clarification questions. Use when a learner needs help preparing, checking, improving, packaging, and emailing a professional Microsoft Word assessment portfolio covering LO1 workflow selection, LO2 Codex plugin and DUO prompting, LO3 mini-app evidence, LO4 automation and observability, LO5 controlled agent scope, and LO6 safety and governance.
 ---
 
 # Assessment Submission Coach
@@ -19,6 +19,8 @@ Use this skill to coach a learner through a complete assessment portfolio. The r
 - Do not invent evidence, screenshots, logs, app links, test results, or safety confirmations.
 - Keep learner work practical and concise; the goal is a complete pass-ready portfolio, not a long report.
 - Enforce safety: reject real personal data, confidential client data, visible API keys, screenshots with secrets, and identifiable employee or customer information.
+- After the final Word portfolio is ready, activate the Codex Gmail plugin or connector path where available, then guide the learner to email it to `melverick@nexiuslabs.com` from their own connected Gmail account in Codex with the report attached.
+- Never ask the learner to paste their Gmail password, app password, recovery code, OAuth token, or any other credential into chat or project files.
 
 ## Context Gathering Mode
 
@@ -164,6 +166,44 @@ screenshot, validation rules, handled error-state proof, and test notes.
    - Flag any missing evidence before saying the submission is ready.
    - Ask only for the final missing items that block readiness.
 
+10. Email the final portfolio to `melverick@nexiuslabs.com`.
+   - This step happens only after the Word `.docx` portfolio has passed the readiness check.
+   - First check whether Gmail tools are available in the current Codex session.
+   - If Gmail tools are not immediately available, guide the learner to install or connect the Gmail plugin/connector before falling back:
+     - Use Codex tool discovery when available to search for Gmail draft, send, attachment, or connector tools.
+     - If no Gmail tool is callable and Codex exposes a plugin or connector install flow, look for an exact Gmail plugin or connector and request installation/connection for Gmail only.
+     - Tell the learner what to do in plain language:
+       - Open Codex app connectors/plugins.
+       - Search for `Gmail`.
+       - Choose the Gmail plugin/connector, not a different email service.
+       - Select install, connect, or enable when Codex prompts for it.
+       - Sign in through Google's secure browser consent page.
+       - Approve the requested Gmail access only if they are comfortable.
+       - Return to Codex after the connection succeeds.
+     - Ask the learner to approve any Codex connector/plugin installation, Google consent screen, or reauthentication prompt before continuing.
+     - Do not request adjacent email tools unless the learner explicitly asks for them.
+   - Explain the Gmail connection flow in learner-friendly terms while the connection path is being activated:
+     - Open Codex app connectors or apps.
+     - Choose Gmail.
+     - Sign in through Google's secure browser consent page.
+     - Grant the requested Gmail access only if they are comfortable.
+     - Return to Codex after the connection succeeds.
+   - After Gmail is connected, re-check for Gmail tools and confirm the authenticated Gmail profile when the tool allows it.
+   - Safety reminders:
+     - Do not paste Gmail passwords, app passwords, backup codes, OAuth tokens, or recovery codes into Codex chat.
+     - Confirm the connected Gmail account is the learner's intended personal Gmail account before drafting or sending.
+     - Do not send if the attachment contains real personal data, secrets, or unredacted screenshots.
+   - Use the Gmail connector or Gmail skill when available to create a draft email first with the final report attached.
+   - The draft email should include:
+     - Recipient: `melverick@nexiuslabs.com`
+     - Subject: `Agentic AI Foundations Assessment Portfolio - <Learner Name>`
+     - Body text: `I created the assessment report with the Word report attached.`
+     - The final `.docx` portfolio attached
+   - Ask the learner to review and approve the draft before sending.
+   - Send the draft only after the learner explicitly approves it in chat.
+   - Report the final status as `Draft created`, `Sent`, `Needs Gmail connection`, or `Manual send required`.
+   - If Gmail cannot be connected or the connector remains unavailable after the activation attempt, do not invent a sent status. Tell the learner the portfolio is ready and provide the exact recipient, subject, body, and attachment path so they can send it manually.
+
 ## Output Patterns
 
 When producing the final assessment document, create a professional Word-ready
@@ -235,9 +275,40 @@ Questions Needed:
 - ...
 ```
 
+When guiding email submission, use this structure:
+
+```markdown
+## Email Submission
+
+Status: Ready to draft / Needs Gmail connection / Sent / Manual send required
+
+Recipient: melverick@nexiuslabs.com
+
+Subject: Agentic AI Foundations Assessment Portfolio - <Learner Name>
+
+Attachment:
+- <final portfolio .docx path>
+
+Gmail Connection Guidance:
+- I will first check for Gmail tools in Codex.
+- If Gmail is not connected, I will try to activate the Gmail plugin/connector connection flow where Codex allows it.
+- To install or connect Gmail, open Codex connectors/plugins, search for `Gmail`, choose the Gmail plugin/connector, and select install/connect/enable when prompted.
+- Connect Gmail through Codex connectors/apps when prompted.
+- Sign in only through Google's secure consent screen.
+- Do not paste passwords, tokens, or backup codes into chat.
+
+Draft Body:
+I created the assessment report with the Word report attached.
+
+Learner Approval Needed:
+- Please review the draft and explicitly confirm before I send this email.
+```
+
 ## Mandatory Safety Rules
 
 - Do not help include real NRIC, FIN, passport numbers, phone numbers, addresses, payroll details, medical details, student records, customer records, or confidential business data.
 - Do not include API keys, tokens, passwords, private URLs, environment files, or secrets in the portfolio.
+- Do not ask for or store Gmail passwords, OAuth tokens, backup codes, app passwords, or recovery codes.
+- Do not claim the portfolio was emailed unless the Gmail connector confirms a draft was sent or a send action succeeded.
 - If a screenshot contains sensitive data, instruct the learner to redact it and replace it before final submission.
 - Safety is mandatory pass: unresolved safety issues mean the submission is not ready.

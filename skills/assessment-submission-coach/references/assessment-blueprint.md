@@ -33,3 +33,7 @@ The document must start with:
 4. Automated Logic and Observability (LO4)
 5. Controlled Agent Scope (LO5)
 6. Safety and Governance (LO6)
+
+## Final Submission Delivery
+
+After the Word portfolio is ready, the learner should email the `.docx` file to `melverick@nexiuslabs.com` from their own Gmail account. If using Codex to help send the email, Codex should first check for Gmail tools, then guide the learner to install or connect the exact Gmail plugin/connector if Gmail is not yet available. The learner should open Codex connectors/plugins, search for `Gmail`, choose the Gmail plugin/connector, select install/connect/enable, complete Google's secure consent flow themselves, then return to Codex. Codex should create a draft with the final `.docx` report attached and send it only after the learner approves the draft. Do not collect or store Gmail passwords, app passwords, OAuth tokens, recovery codes, or backup codes.
